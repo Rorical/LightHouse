@@ -8,6 +8,7 @@ import numpy as np
 import IPython.display as ipd
 import pydub
 from scipy.signal import fftconvolve
+import os
 
 def mp3read(f, normalized=False):
     """MP3 to numpy array"""
@@ -33,49 +34,46 @@ def plot_coordinates(coords, title):
     return q
 
 
-HRTF_path = "RIEC_hrir_subject_046.sofa"
+HRTF_path = "RIEC_hrir_subject_057.sofa"
 HRTF = sofa.Database.open(HRTF_path)
 
 HRTF.Metadata.dump()
 
+
+
 # plot Source positions
-source_positions = HRTF.Source.Position.get_values(system="cartesian")[10:11]
+source_positions = HRTF.Source.Position.get_values(system="cartesian")[72:80]
 plot_coordinates(source_positions, 'Source positions')
 
 # plot Data.IR at M=5 for E=0
-measurement = 10
-emitter = 0
-legend = []
 
-t = np.arange(0,HRTF.Dimensions.N)*HRTF.Data.SamplingRate.get_values(indices={"M":measurement})
-
-fs, y = mp3read("test.wav", normalized = True)
+fs, y = mp3read("066889f9dca5e4be002cfa1109f59f6a.mp3", normalized = True)
 y = y.transpose()
 
-plt.figure(figsize=(15, 5))
+audios = []
 
-outs = []
-for receiver in np.arange(HRTF.Dimensions.R):
-    val = HRTF.Data.IR.get_values(indices={"M":measurement, "R":receiver, "E":emitter})
-    plt.plot(t, val)
-    legend.append('Receiver {0}'.format(receiver))
-    outs.append(fftconvolve(val, y))
+sec = 10
 
-out = np.stack(outs, axis=0)
+for measurement in range(72, 144 + 72):
+    tstart_s = sec
+    tend_s = sec + 100
+    sec += 100
+    print(tstart_s*fs, tend_s*fs)
+    y_clip = y[:, int(round(tstart_s*100)) :int(round(tend_s*100))]
 
-plt.title('HRIR at M={0} for emitter {1}'.format(measurement, emitter))
-plt.legend(legend)
-plt.xlabel('$t$ in s')
-plt.ylabel(r'$h(t)$')
-plt.grid()
+    val0 = HRTF.Data.IR.get_values(indices={"M":measurement, "R":0, "E":0})
+    val1 = HRTF.Data.IR.get_values(indices={"M":measurement, "R":1, "E":0})
+    
+    
+    out = np.stack([fftconvolve(val0, y_clip[0,:]), fftconvolve(val1, y_clip[1,:])], axis=0)
+    audios.append(out)
 
-audio = pydub.AudioSegment(
-    out.tobytes(), 
-    frame_rate=fs,
-    sample_width=out.dtype.itemsize, 
-    channels=2
-)
+outs = np.hstack(audios)
+audio = ipd.Audio(data=outs, rate=fs, autoplay=True)
+    
+with open('result.wav', 'wb') as f:
+    f.write(audio.data)
 
-audio.export("result.mp3", format="mp3")
+
 
 #HRTF.close()
