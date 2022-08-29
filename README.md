@@ -1,1 +1,1 @@
-LightHouse: Open Source Accessible Devices, Another Eye.
+# LightHouse: Open Source Accessible Devices, Another Eye.
