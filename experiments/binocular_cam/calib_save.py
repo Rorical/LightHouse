@@ -25,6 +25,6 @@ while cap.isOpened():
     index += 1
     if index > 40:
         break
-    time.sleep(2)
+    time.sleep(1)
     
 cap.release()
