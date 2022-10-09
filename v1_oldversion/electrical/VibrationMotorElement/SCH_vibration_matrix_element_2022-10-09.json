@@ -1,0 +1,51 @@
+{
+  "editorVersion": "6.5.15",
+  "docType": "5",
+  "title": "vibration_matrix_element",
+  "description": "",
+  "colors": {},
+  "schematics": [
+    {
+      "docType": "1",
+      "title": "Sheet_1 copy",
+      "description": "",
+      "dataStr": {
+        "head": {
+          "docType": "1",
+          "editorVersion": "6.5.15",
+          "newgId": true,
+          "c_para": {
+            "Prefix Start": "1"
+          },
+          "c_spiceCmd": "null",
+          "hasIdFlag": true,
+          "uuid": "a406ca088a054450ab1beb7a9db88e5f",
+          "x": "0",
+          "y": "0",
+          "portOfADImportHack": "",
+          "importFlag": 0,
+          "transformList": ""
+        },
+        "canvas": "CA~1000~1000~#FFFFFF~yes~#CCCCCC~5~1000~1000~line~5~pixel~5~0~0",
+        "shape": [
+          "LIB~225~-390~package`HDR-TH_2P-P2.54-V-M`BOM_Supplier`LCSC`BOM_Supplier Part`C492401`BOM_Manufacturer`XFCN`BOM_Manufacturer Part`PZ254V-11-02P`Contributor`LCSC`BOM_JLCPCB Part Class`Extended Part`spicePre`H`spiceSymbolName`PZ254V-11-02P`~90~0~ggedf484ca725a0436a~e6b180e1316a4d0690f78b72797504c2~6107490819734af0acd77bc02316fe34~0~b9403d3420dc9420~yes~yes~208db64a5d6a4d3b8ff56d09442c8396~1659687363~92e0413a38e046bda257852edbe9f208#@$T~N~192.15625~-406.75~0~#000080~Arial~~~~~comment~PZ254V-11-02P~1~start~gge23119~0~pinpart#@$T~P~219.046875~-416.75~0~#000080~Arial~~~~~comment~H1~1~start~gge23125~0~pinpart#@$R~210~-400~2~2~30~20~#880000~1~0~none~gge23131~0~#@$E~215~-385~1.5~1.5~#880000~1~0~#880000~gge23134~0#@$P~show~0~1~220~-370~270~gge23137~0^^220~-370^^M 220 -370 v -10~#880000^^1~224~-383.7~270~1~start~~~#0000FF^^1~219~-379.5~270~1~end~~~#0000FF^^0~220~-377^^0~M 223 -380 L 220 -383 L 217 -380#@$P~show~0~2~230~-370~270~gge23158~0^^230~-370^^M 230 -370 v -10~#880000^^1~234~-383.7~270~2~start~~~#0000FF^^1~229~-379.5~270~2~end~~~#0000FF^^0~230~-377^^0~M 233 -380 L 230 -383 L 227 -380",
+          "LIB~225~-470~package`CONN-SMD_MH254RS-11-02-1000`BOM_Supplier`LCSC`BOM_Supplier Part`C668122`BOM_Manufacturer`XFCN`BOM_Manufacturer Part`MH254RS-11-02-1000`Contributor`LCSC`BOM_JLCPCB Part Class`Extended Part`spicePre`H`spiceSymbolName`MH254RS-11-02-1000`~90~0~gge5b661b9a6217d53e~5ea8ab80343b4c2ab95f375692619611~93455714a5be431d82dbaf34c5ef5f2b~0~048918ca98170c7a~yes~yes~baea31df72f9400989c476aae37608d0~1641818604~47b1c7b50e054797a77c20d420cdcd05#@$T~N~219.046875~-483~0~#000080~Arial~~~~~comment~MH254RS-11-02-1000~1~start~gge23245~0~pinpart#@$T~P~219.046875~-492.078125~0~#000080~Arial~~~~~comment~H2~1~start~gge23251~0~pinpart#@$R~210~-480~2~2~30~20~#880000~1~0~none~gge23257~0~#@$E~215~-465~1.5~1.5~#880000~1~0~#880000~gge23260~0#@$P~show~0~1~220~-450~270~gge23263~0^^220~-450^^M 220 -450 v -10~#880000^^1~224~-463.7~270~1~start~~~#0000FF^^1~219~-459.5~270~1~end~~~#0000FF^^0~220~-457^^0~M 223 -460 L 220 -463 L 217 -460#@$P~show~0~2~230~-450~270~gge23284~0^^230~-450^^M 230 -450 v -10~#880000^^1~234~-463.7~270~2~start~~~#0000FF^^1~229~-459.5~270~2~end~~~#0000FF^^0~230~-457^^0~M 233 -460 L 230 -463 L 227 -460",
+          "W~220 -315 220 -370~#008800~1~0~none~gge23371~0",
+          "W~230 -315 230 -370~#008800~1~0~none~gge23374~0",
+          "W~220 -450 220 -435 185 -435 185 -345 220 -345~#008800~1~0~none~gge23377~0",
+          "W~230 -450 230 -435 265 -435 265 -345 230 -345~#008800~1~0~none~gge23381~0",
+          "LIB~225~-280~package`VIBRATION_MOTOR`BOM_Manufacturer``BOM_Manufacturer Part``BOM_Supplier Part``BOM_Supplier`LCSC`link``Contributor`johnsonwust`spicePre`U`spiceSymbolName`VM`~~0~gge5a81aba2d712bc17~2c1cc4687185486aa1ef03beb84652b6~3ee9345780cd4216a80da09b7c6b3c54~0~1a8c1149c7e76b03~yes~yes~9264353a648d4d5d8929c09d99f62ba0~1661538253~4891bf1babf04913bfebd06922042890#@$T~N~242~-278.84375~0~#000080~Arial~~~~~comment~VM~1~start~gge23608~0~pinpart#@$T~P~242~-287.2421875~0~#000080~Arial~~~~~comment~U1~0~start~gge23752~0~pinpart#@$T~L~242~-278.84375~0~#000080~Arial~~~~~comment~VM~1~start~gge23620~0~pinpart#@$T~L~245~-289.999975~0~#000080~Arial~~~~~comment~M1~1~start~gge23626~0~pinpart#@$P~show~null~1~220~-315~90~gge23632~0^^220~-315^^M 220 -315 v 20~#880000^^1~223~-293~270~1~end~~7.0pt~#0000FF^^1~219~-300~270~1~start~~7.0pt~#0000FF^^0~220~-298^^0~M 217 -295 L 220 -292 L 223 -295#@$P~show~null~2~230~-315~90~gge23653~0^^230~-315^^M 230 -315 v 20~#880000^^1~233~-293~270~2~end~~7.0pt~#0000FF^^1~229~-300~270~2~start~~7.0pt~#0000FF^^0~230~-298^^0~M 227 -295 L 230 -292 L 233 -295#@$E~225~-280~15~15~#000000~1~0~none~gge23674~0",
+          "J~220~-345~2.5~#CC0000~gge23378~0",
+          "J~230~-345~2.5~#CC0000~gge23382~0"
+        ],
+        "BBox": {
+          "x": 185,
+          "y": -500.7,
+          "width": 127.2,
+          "height": 235.7
+        },
+        "colors": {}
+      }
+    }
+  ]
+}
